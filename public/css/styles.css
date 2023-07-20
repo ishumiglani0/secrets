@@ -1,6 +1,12 @@
 
-body {
-  background-color: #E8ECEF;
+body,.jumbotron{
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body{
+  overflow-x: hidden;
 }
 
 .centered {
@@ -13,4 +19,85 @@ body {
   font-size: 2rem;
   color: #fff;
   background-color: #000;
+}
+
+.c-w{
+  color: white;
+}
+.bg-w{
+  background-color: white;
+}
+.bg-t{
+  background-color: transparent!important;
+}
+.c-p{
+  color: #ff004f
+}
+
+.b-w-i{
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.b-w-c{
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 10px #ff004f;
+}
+
+.t-s-w{
+  text-shadow: 10px 10px 10px cyan,-10px 10px 10px cyan,10px -10px 10px cyan,-10px -10px 10px cyan;
+}
+
+.move-up{
+  position: relative;
+  bottom: 28px;
+}
+
+.btn-p:hover{
+  background-color: #ff004f;
+}
+
+.back{
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 60px;
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+}
+
+.back:hover{
+  background-color: white;
+  color: black;
+}
+
+.btn-group{
+  position: sticky;
+  top: 30px;
+  left: 90%;
+}
+
+
+.s-hp{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.ts-c{
+  text-shadow: 10px 10px 15px #ff004f,
+              -10px 10px 15px #ff004f,
+              10px -10px 15px #ff004f,
+              -10px -10px 15px #ff004f;
+}
+
+.btn-secret{
+  float: right;
+}
+
+.z-i{
+  z-index: 1000!important;
 }

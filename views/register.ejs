@@ -1,41 +1,76 @@
 <%- include('partials/header') %>
+
+<div class="back text-center">
+  <a onclick="{history.back()}">
+    &larr;
+  </a>
+</div>
 <div class="container mt-5">
-  <h1>Register</h1>
+  <h1 class="c-w text-center c-p t-s-w">Register</h1>
 
-  <div class="row">
-    <div class="col-sm-8">
-      <div class="card">
+  <div class="row justify-content-center">
+
+    <div class="col-sm-8 b-w-c mt-5 mb-2">
+      <div class="card bg-t b-w c-w">
         <div class="card-body">
-
           <!-- Makes POST request to /register route -->
           <form action="/register" method="POST">
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" class="form-control" name="username">
+              <input class="b-w-i form-control" type="email" class="form-control" name="username">
             </div>
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" class="form-control" name="password">
+              <input class="b-w-i form-control" type="password" class="form-control" name="password">
             </div>
-            <button type="submit" class="btn btn-dark">Register</button>
+            <button type="submit" class="btn btn-dark btn-p">Register</button>
           </form>
 
         </div>
       </div>
     </div>
+    <div class="col-sm-10 row mt-2">
+      <hr class="h-c-l col-sm-5" color="white">
+      <div class="col-sm-1 text-center c-w f-1"> OR</div>>
+      <hr class="h-c-l col-sm-5" color="white">
+    </div>
 
-    <!-- <div class="col-sm-4">
-      <div class="card social-block">
-        <div class="card-body">
-          <a class="btn btn-block" href="/auth/google" role="button">
+    <div class="col-sm-8 b-w-c mt-4">
+      <div class="card social-block bg-t py-4">
+        <div class="card-body row justify-content-center">
+          <a class="btn btn-block btn-social btn-google col-sm-4" href="/auth/google" role="button">
             <i class="fab fa-google"></i>
             Sign Up with Google
           </a>
         </div>
       </div>
-    </div> -->
+    </div>
 
   </div>
 </div>
+
+<script>
+  console.log('running')
+  function updateClassBasedOnWidth() {
+  const elements = document.querySelectorAll(".h-c-l");
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 1200) {
+    elements.forEach((elem)=>{
+      elem.classList.add("col-sm-3");
+      elem.classList.remove("col-sm-5");
+    })
+  } else {
+    elements.forEach((elem)=>{
+      elem.classList.add("col-sm-5");
+      elem.classList.remove("col-sm-3");
+    });
+  }
+}
+
+// Call the function initially and add a resize event listener to handle changes when the window is resized
+updateClassBasedOnWidth();
+window.addEventListener("resize", updateClassBasedOnWidth);
+</script>
 
 <%- include('partials/header') %>
