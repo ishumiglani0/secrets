@@ -74,4 +74,23 @@ updateClassBasedOnWidth();
 window.addEventListener("resize", updateClassBasedOnWidth);
 </script>
 <%- include('partials/below-footer') %>
+
+  <script>
+     function below() {
+
+  const elem = document.getElementById('elow')
+  const screenWidth = window.outerWidth;
+
+  console.log('ishu' + screenWidth)
+  if (screenWidth < 390) {
+      elem.classList.add("ishu-b");
+      
+    } else {
+      elem.classList.remove("ishu-b");
+  }
+}
+// Call the function initially and add a resize event listener to handle changes when the window is resized
+below();
+window.addEventListener("resize", below);
+  </script>
 <%- include('partials/footer') %>
