@@ -4,6 +4,11 @@
   border-top:1px solid white;
   box-shadow: 10px 0px 50px 5px white;
 }
+.ishu-b{
+  position:absolute;
+  bottom : 0px;
+  width : 100%;
+}
 </style>
 <footer class="bg-dark text-center text-white mt-5">
     <section class="d-flex justify-content-around p-4 border-bottom row">
@@ -103,3 +108,22 @@
     <!-- Copyright -->
   </footer>
   <!-- Footer -->
+
+  <script>
+     function below() {
+
+  const elem = document.getElementById('elow')
+  const screenWidth = window.outerWidth;
+
+  console.log('ishu' + screenWidth)
+  if (screenWidth < 390) {
+      elem.classList.add("ishu-b");
+      
+    } else {
+      elem.classList.remove("ishu-b");
+  }
+}
+// Call the function initially and add a resize event listener to handle changes when the window is resized
+below();
+window.addEventListener("resize", below);
+  </script>
