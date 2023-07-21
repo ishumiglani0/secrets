@@ -2,7 +2,7 @@
 <%- include('partials/nav-2') %>
 <%- include('partials/back') %>
 
-<h1 class="c-w text-center c-p t-s-w mt-5 pt-5">Others' Secrets</h1>
+<h1 class="c-w text-center c-p t-s-w mt-5 pt-5">Yours Secrets</h1>
 
 <% const cardClassNames = ['bg-primary', 'bg-secondary', 'bg-success', 'bg-info', 'bg-warning', 'bg-danger','bg-dark']; %>
 <% index=0%>
@@ -25,6 +25,9 @@
   <% postno++%>
   <%index++%>
   <% }) %>
+<%if(secrets.length===0){%>
+<h1 class="text-center text-warning">Nothing to Preview...</h1>
+<%}%>
 </div>
 <%- include('partials/below-footer') %>
 <%- include('partials/footer') %>
