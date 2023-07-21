@@ -10,7 +10,7 @@ body{
 }
 
 .centered {
-    padding-top: 200px;
+    padding: 150px 0;
     text-align: center;
 }
 
@@ -60,7 +60,7 @@ body{
 
 .back{
   position: fixed;
-  top: 5%;
+  top: 15%;
   left: 5%;
   border: 1px solid white;
   border-radius: 20px;

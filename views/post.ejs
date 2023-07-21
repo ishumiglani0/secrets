@@ -1,16 +1,22 @@
 <%- include('partials/header') %>
+<%- include('partials/nav-2') %>
 <style>
-    .post-c{
+    .container1{
         background: #000000;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      height: 100vh;
-      padding: 100px;
-      font-size: 24px;
+padding: 5rem;
+overflow-x: hidden;
 }
-.back{
+footer{
+    margin-top: 0!important;
+    overflow-x: hidden;
+    }
+
+
+        .back{
   position: fixed;
-  top: 5%;
+  top: 15%;
   left: 5%;
   border: 1px solid white;
   border-radius: 20px;
@@ -18,22 +24,18 @@
   background-color: transparent;
   color: white;
   font-size: 30px;
-}
-
-.back:hover{
-  background-color: white;
-  color: black;
-}
+} 
 </style>
 
 <div class="back text-center">
-  <a onclick="{history.back()}">
-    &larr;
-  </a>
+    <a onclick="{history.back()}">
+      &larr;
+    </a>
 </div>
-<div class="post-c  pt-5">
+<div class="container1">
   <h1 class="ts-c display-3 text-warning text-center">Secret...</h1>
   <p class=" ts-c s-hp text-warning mt-5"><%=secret%></p>
   </div>
 </div>
+<%- include('partials/post-footer') %>
 <%- include('partials/footer') %>

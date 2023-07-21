@@ -7,16 +7,15 @@
 <% const cardClassNames = ['bg-primary', 'bg-secondary', 'bg-success', 'bg-info', 'bg-warning', 'bg-danger','bg-dark']; %>
 <% index=0%>
 <div class="row justify-content-around p-5">
-  <% usersWithSecrets.forEach(function(user){ %>
     <%postno=0%>
-    <% user.secrets.forEach(function(secret){ %>
+    <% secrets.forEach(function(secret){ %>
   <div class="card text-white <%= cardClassNames[index % cardClassNames.length] %> m-5 col-4" style="max-width: 18rem;">
     <div class="card-header">#Secret <%=index+1%></div>
     <div class="card-body">
       <p class="card-text"><%=secret.substring(0,200)%>
       <%if(secret.length>200){%>
         ...</p>
-        <a href="/secrets/<%=user._id%>/<%=postno%>" class="card-link text-light">Read More &rarr;</a>
+        <a href="/secrets/<%=userid%>/<%=postno%>" class="card-link text-light">Read More &rarr;</a>
       <%}%>
       <%if(secret.length<=200){%>
         </p>
@@ -25,7 +24,6 @@
   </div>
   <% postno++%>
   <%index++%>
-  <% }) %>
   <% }) %>
 </div>
 <%- include('partials/below-footer') %>

@@ -1,0 +1,59 @@
+<style>
+    .line {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+}
+nav{
+  border-bottom:1px solid white;
+  box-shadow: 0px 10px 50px 5px white;
+}
+</style>
+<nav
+  class="navbar navbar-expand-lg fixed-top text-white"
+  style="background-color: #27282a"
+>
+  <div class="container-fluid px-5 row">
+    <a class="navbar-brand text-white col-sm-3" href="#">JLJ - Secrets</a>
+    <!-- <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <button
+      class="navbar-toggler col-sm-1"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+    >
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul
+        class="navbar-nav me-auto mb-2 mb-lg-0 col-sm-8 justify-content-center"
+      >
+        <li class="nav-item mx-4">
+          <a class="nav-link active text-white" aria-current="page" href="/"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link text-white" href="/login">Login</a>
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link text-white" href="/register">Sign-Up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

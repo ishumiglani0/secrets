@@ -1,19 +1,22 @@
 <%- include('partials/header') %>
+<%- include('partials/nav-2') %>
+<%- include('partials/back') %>
 
-<div class="container pt-5">
+<div class="container my-5 py-5">
   <h1 class="ts-c display-3 text-warning text-center">Secrets...</h1>
   <p class=" ts-c s-hp text-warning">Don't keep your secrets, share them anonymously!</p>
 
   
-  <form action="/submit" method="POST">
+  <form class="mb-5" action="/submit" method="POST">
     
     <div class="form-group">
         <textarea name="secret" class=" form-control bg-t mt-5 text-light" aria-label="With textarea" rows=12></textarea>
     </div>
-      <button type="submit" class="btn btn-success btn-secret mr-5 mt-3">Submit</button>
+      <button type="submit" class="btn btn-success btn-secret mr-5 mt-5">Submit</button>
   </form>
 
 
-  </div>
 </div>
+
+<%- include('partials/below-footer') %>
 <%- include('partials/footer') %>
